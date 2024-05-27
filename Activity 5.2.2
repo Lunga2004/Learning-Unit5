@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class PhoneNumber {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to read input from the user
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a 10-digit phone number
+        System.out.print("Enter a 10-digit phone number: ");
+        String input = scanner.nextLine();
+
+        // Check if the input is exactly 10 digits long
+        if (input.length() == 10) {
+            // Format the phone number with parentheses, a space, and a dash
+            String phoneNumber = "(" + input.substring(0, 3) + ") " + input.substring(3, 6) + "-" + input.substring(6);
+
+            // Print the formatted phone number
+            System.out.println("The phone number entered is: " + phoneNumber);
+        } else {
+            // Print an error message if the input is not exactly 10 digits long
+            System.out.println("Error!!!!");
+        }
+    }
+
+}
